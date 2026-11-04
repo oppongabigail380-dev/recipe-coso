@@ -1,0 +1,515 @@
+:root{
+    /*dimensions*/
+    --width-full: 100%;
+    --width-12col: 1200px;
+
+    /*grid settings*/
+    --grid-gap:10px;
+    --padding-default: 20px;
+
+    /*colors*/
+    --background-color-navigation: #00000088;
+    --background-color-light: #ededed;
+    --background-color-dark-bg: #111111;
+    --primary-color: #bf5b23;
+    --color-light: #ededed;
+    --color-dark: #373737;
+    --color-white:#ffffff;
+
+    /*color swatch for categories*/
+    --category-seafood: #3e30e2;
+    --category-chicken: #299c8e;
+    --category-meats: #d09189;
+    --category-veg: #298f3f;
+    --category-dessert: #9374eb;
+    --category-snacks: #9a951e;
+    --category-pasta: #bf5b23;
+
+}
+
+
+/*reset css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Data categories setup*/
+
+/*color names and icons trustttt*/
+
+/*seafood*/
+
+div[data-category="seafood"]{
+    border-left: 1px solid var (--category-seafood);
+}
+
+span[data-category="seafood"]{
+    color: var(--category-seafood);
+}
+
+p[data-category="seafood"]{
+    color: var(--category-seafood);
+}
+
+/*chicken*/
+
+div[data-category="chicken"]{
+    border-left: 1px solid var(--category-chicken);
+}
+
+span[data-category="chicken"]{
+    color: var(--category-chicken);
+}
+
+p[data-category="chicken"]{
+    color: var(--category-chicken);
+}
+
+/*pasta*/
+
+div[data-category="pasta"]{
+    border-left: 1px solid var(--category-pasta);
+}
+
+span[data-category="pasta"]{
+    color: var(--category-pasta);
+}
+
+p[data-category="pasta"]{
+    color: var(--category-pasta);
+}
+
+/*meat*/
+
+div[data-category="meats"]{
+    border-left: 1px solid var(--category-meats);
+}
+
+span[data-category="meats"]{
+    color: var(--category-meats);
+}
+
+p[data-category="meats"]{
+    color: var(--category-meats);
+}
+
+/*vegetarian*/
+
+div[data-category="vegetarian"]{
+    border-left: 1px solid var var(--category-veg);
+}
+
+span[data-category="vegetarian"]{
+    color: var(--category-veg);
+}
+
+p[data-category="vegetarian"]{
+    color: var(--category-veg);
+}
+
+/*snacks*/
+
+div[data-category="snacks"]{
+    border-left: 1px solid var(--category-snacks);
+}
+
+span[data-category="snacks"]{
+    color: var(--category-snacks);
+}
+
+p[data-category="snacks"]{
+    color: var(--category-snacks);
+}
+
+/*desserts*/
+
+div[data-category="desserts"]{
+    border-left: 1px solid var(--category-dessert);
+}
+
+span[data-category="desserts"]{
+    color: var(--category-dessert);
+}
+
+p[data-category="desserts"]{
+    color: var(--category-dessert);
+}
+
+/*stuff*/
+
+body{
+    width:var(--width-full); 
+    font-family: 'Robot0' , sans-serif;
+    background-color: var(--background-color-dark-bg);
+    position: relative;
+}
+
+.navigation, .hero, .image-section, .footer{
+    width: var(--width-full);
+}
+
+.todays_recipes, .categories, .content-area{
+    width: var(--width-12col);
+    margin: 0 auto 0 auto;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--grid-gap);
+    width: var(--width-full);
+}
+
+
+.hamburger-menu{}
+display:none 
+
+
+.mobile-menu{}
+
+
+.navigation{
+    width: var(--width-full);
+    height: 80px;
+    background-color: var(--background-color-navigation);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.navigation.fixed{
+    position: fixed;
+    top: 0;
+}
+
+.menu-container{
+    width: var(--width-12col);
+}
+
+.menu-container ul{
+    display: flex;
+}
+
+.menu-container ul li{
+    list-style: none;
+}
+
+.menu-container a {
+    color: var(--background-color-light);
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid var(--background-color-light);
+}
+
+.menu-container li:last-child a{
+    border-right: none;
+}
+
+.menu-container a:hover{
+    color: var(--primary-color);
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    color: var(--background-color-light);
+    width: var(--width-full);
+    min-height: 600px;
+    height: auto;
+    margin: 0;
+    background-image: url('https://picsum.photos/1920/800');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: var(--grid-gap);
+    width: var(--width-12col);
+}
+
+.hero-text{
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    margin-top: 200px;
+    color: var(--background-color-light);
+}
+
+.hero-text h4{
+    font-size: 34px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px #00000088;
+}
+
+.hero-text h6{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 5px 0;
+    text-shadow: 1px 1px 1px #00000088;
+}
+
+.hero-search{
+    grid-column: 2 / span 3;
+    grid-row: 2;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--background-color-light);
+    outline: none;
+    color: var(--background-color-light);
+    padding: 10px 20px 10px 40px;
+}
+
+.search-input::placeholder{
+    color: var(--background-color-light);
+}
+
+.search-icon{
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--background-color-light);
+}
+
+/*Todays recipe start*/
+.todays_recipes{
+    height: fit-content;
+    width: var(--width-12col);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+}
+
+.todays_recipes_content_block_image img{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.todays_recipes_headline{
+    font-size: 37px;
+    color: var(--background-color-light);
+    height: 60px;
+    font-weight: 700;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--background-color-light);
+    text-transform: uppercase;
+}
+
+.todays_recipes_content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    height: fit-content;
+    width: var(--width-12col);
+}
+
+.todays_recipes_content_block{
+    background-color: var(--background-color-light);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.todays_recipes_content_block_text{
+    padding: 20px;
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.todays_recipes_content_block_text h5{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.todays_recipes_content_block_text p{
+    font-size: 16px;
+}
+
+.todays_recipes_content_block_bottom_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.todays_recipes_content_bottom_area_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+}
+
+.todays_recipes_content_bottom_area_left p{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.todays_recipes_content_bottom_area_right button{
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-light);
+    font-size: 14px;
+    font-weight: 700;
+    /*jk with the cursor, -> cursor: pointer;*/
+    cursor: url(data:image/png;base64,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) 25 1, pointer !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+
+}
+
+.todays_recipes_content_bottom_area_right button a{
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.todays_recipes_content_bottom_area_right button a:hover{
+    color: var(--primary-color);
+}  
+
+/*categories start section start*/
+
+.categories{
+    width: var(--width-12col);
+}
+
+.categories_content {
+    background-color: var(--background-color-light);
+    /*add gradient?*/
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--grid-gap);
+}
+
+.categories_content_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.categories_content_block svg{
+    font-size: 40px;
+
+}
+
+.categories_content_block p{
+    padding-top: 5px;
+}
+
+.image_section{
+    height: 600px;
+    width: var(--width-full);
+    display: flex;
+    justify-content: center;
+    background-image: url("https://picsum.photos/1920/400");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.image_section_controller{
+    width: var(--width-12col);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 50px;
+}
+
+.image_section_box{
+    grid-row: 2;
+    background-color: var(--background-color-light);
+    height: fit-content;
+    padding: 30px;
+    grid-column: 9 / span 4;
+}
+
+.image_section_box h4{
+    color: var(--primary-color);
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.image_section_box p{
+    font-size: 16px;
+    color: var(--background-color-dark-bg);
+}
+
+.in_the_kitchen_box{
+    background-color: var(--background-color-light);
+    padding: 30px;
+    grid-column: 1 / span 6;
+    
+}
+
+@media (width <= 768px) {
+    :root{
+        --width-12col: 100%;
+      
+    }
+      
+ 
+    body{
+        background-color: red;
+    }
+    .todays_recipes_content {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        width: calc(100% - 20px);
+
+    }
+
+    .categories_content{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .categories_content_block{
+        width: 30%;
+
+    }
+
+    .image_section{
+        display: none;
+    }
+
+}
