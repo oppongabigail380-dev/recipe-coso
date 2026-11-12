@@ -1,0 +1,52 @@
+:root{
+    /*dimensions*/
+    --width-full: 100%;
+    --width-12col: 1200px;
+
+    /*grid settings*/
+    --grid-gap:10px;
+    --padding-default: 20px;
+
+    /*colors*/
+    --background-color-navigation: #00000088;
+    --background-color-light: #ededed;
+    --background-color-dark-bg: #111111;
+    --primary-color: #bf5b23;
+    --color-light: #ededed;
+    --color-dark: #373737;
+    --color-white:#ffffff;
+
+    /*color swatch for categories*/
+    --category-seafood: #3e30e2;
+    --category-chicken: #299c8e;
+    --category-meats: #d09189;
+    --category-veg: #298f3f;
+    --category-dessert: #9374eb;
+    --category-snacks: #9a951e;
+    --category-pasta: #bf5b23;
+
+ .recipe-instructions {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  .recipe-section-title {
+    font-size: 26px;
+    white-space: normal;
+    border-bottom: 1px solid var(--background-color-light);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+
+  .recipe-instructions-row {
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+  }
+
+  .recipe-instructions-row p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+}
