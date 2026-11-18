@@ -428,6 +428,33 @@ body {
   opacity: 0.7;
 }
 
+
+/* RECIPE FACTS ICONS */
+
+.recipe-facts {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.recipe-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+}
+
+.recipe-facts svg {
+    width: 30px;
+    height: 30px;
+    color: var(--primary-colour);
+    stroke: var(--primary-colour);
+    stroke-width: 2.5;
+    flex-shrink: 0;
+    display: block;
+}
+
+
 @media (width <= 768px) {
   :root {
     --width-12col: 100%;

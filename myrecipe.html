@@ -1,11 +1,271 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myrecipe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pasta, one shape at a time</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="myrecipestyle.css">
 </head>
+
 <body>
+
+  <!-- Navigation -->
+  <header class="recipe-header">
+
+    <nav class="recipe-nav">
+      <a href="index.html" class="active">HOME</a>
+      <span>|</span>
+      <a href="Recipe_details.html">RECIPES</a>
+      <span>|</span>
+      <a href="search.html">Search></a>
+      <a href="myrecipe.html">My recipe</a>
+    </nav>
+
+  </header>
+
+
+  <!-- Hero section -->
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <p class="eyebrow">A LITTLE TASTE OF ITALY</p>
+
+      <h1>Pasta, one shape at a time</h1>
+
+      <p class="lead">
+        Four classic recipes, each built around the pasta that suits it best.
+        Pick a shape and start cooking.
+      </p>
+
+      <nav aria-label="Recipes">
+        <ul class="shape-nav">
+          <li><a href="#spaghetti">Spaghetti</a></li>
+          <li><a href="#penne">Penne</a></li>
+          <li><a href="#fettuccine">Fettuccine</a></li>
+          <li><a href="#fusilli">Fusilli</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <img
+      class="hero-art"
+      src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=1200&q=85"
+      alt="A bowl of Italian pasta">
+
+  </section>
+
+
+  <!-- Main recipes -->
+  <main>
+
+    <!-- SPAGHETTI -->
+    <section class="recipe" id="spaghetti">
+
+      <img
+        class="plate"
+        src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=900&q=85"
+        alt="Spaghetti pasta on a plate">
+
+      <div class="recipe-body">
+
+       
+
+        <h2>Spaghetti carbonara</h2>
+
+      
+
+        <p>
+          Silky egg and cheese sauce, crisp pork, and plenty of black pepper.
+          There is no cream in a real carbonara.
+        </p>
+
+        <h3>Ingredients</h3>
+
+        <ul>
+          <li>200 g spaghetti</li>
+          <li>100 g guanciale or pancetta, diced</li>
+          <li>2 whole eggs and 1 egg yolk</li>
+          <li>50 g Pecorino Romano, finely grated</li>
+          <li>Black pepper and salt</li>
+        </ul>
+
+        <h3>Method</h3>
+
+        <ol>
+          <li>Boil the spaghetti in well-salted water until just al dente. Save a cup of the cooking water.</li>
+          <li>Fry the guanciale in a cold pan over medium heat until golden and crisp.</li>
+          <li>Whisk the eggs, yolk, Pecorino and a generous amount of pepper in a bowl.</li>
+          <li>Toss the drained pasta with the guanciale off the heat. Stir in the egg mixture with a splash of cooking water until glossy.</li>
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <!-- PENNE -->
+    <section class="recipe" id="penne">
+
+      <img
+        class="plate"
+        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=900&q=85"
+        alt="Penne pasta with tomato sauce">
+
+      <div class="recipe-body">
+
     
+
+        <h2>Penne all'arrabbiata</h2>
+
+  
+
+        <p>
+          The name means angry, and the chilli is why.
+          The ridges and hollow tubes of penne hold on to every drop of sauce.
+        </p>
+
+        <h3>Ingredients</h3>
+
+        <ul>
+          <li>200 g penne</li>
+          <li>400 g canned whole tomatoes, crushed by hand</li>
+          <li>3 garlic cloves, sliced</li>
+          <li>1 to 2 dried chillies, crumbled</li>
+          <li>3 tbsp olive oil</li>
+          <li>Fresh basil or parsley, and salt</li>
+        </ul>
+
+        <h3>Method</h3>
+
+        <ol>
+          <li>Warm the olive oil with the garlic and chilli over low heat for 2 minutes. Do not let the garlic brown.</li>
+          <li>Add the tomatoes and a pinch of salt. Simmer for 15 minutes until thick.</li>
+          <li>Boil the penne until al dente, then drain.</li>
+          <li>Toss the pasta in the sauce for a minute and finish with the fresh herbs.</li>
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <!-- FETTUCCINE -->
+    <section class="recipe" id="fettuccine">
+
+      <img
+        class="plate"
+        src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=900&q=85"
+        alt="Creamy fettuccine pasta">
+
+      <div class="recipe-body">
+
+        <p class="recipe-number">03 / FETTUCCINE</p>
+
+        <h2>Fettuccine Alfredo</h2>
+
+        <p class="meta">20 minutes · Serves 2</p>
+
+        <p>
+          Ribbons of egg pasta in a rich butter and Parmesan sauce.
+          Good cheese matters more than anything else here.
+        </p>
+
+        <h3>Ingredients</h3>
+
+        <ul>
+          <li>200 g fettuccine</li>
+          <li>40 g butter</li>
+          <li>60 g Parmesan, finely grated</li>
+          <li>80 ml cream</li>
+          <li>Black pepper, a pinch of nutmeg, salt</li>
+        </ul>
+
+        <h3>Method</h3>
+
+        <ol>
+          <li>Boil the fettuccine in salted water until al dente. Save a cup of the cooking water.</li>
+          <li>Melt the butter with the cream in a wide pan over low heat.</li>
+          <li>Add the drained pasta and toss. Sprinkle in the Parmesan a little at a time, loosening with cooking water.</li>
+          <li>Finish with pepper and nutmeg, and serve straight away.</li>
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <!-- FUSILLI -->
+    <section class="recipe" id="fusilli">
+
+      <img
+        class="plate"
+        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=900&q=85"
+        alt="Pasta with fresh green pesto">
+
+      <div class="recipe-body">
+
+        <p class="recipe-number">04 / FUSILLI</p>
+
+        <h2>Fusilli al pesto</h2>
+
+        <p class="meta">20 minutes · Serves 2</p>
+
+        <p>
+          The spirals of fusilli trap fresh basil pesto in every twist.
+          Make the pesto while the water comes to the boil.
+        </p>
+
+        <h3>Ingredients</h3>
+
+        <ul>
+          <li>200 g fusilli</li>
+          <li>50 g fresh basil leaves</li>
+          <li>30 g pine nuts, lightly toasted</li>
+          <li>40 g Parmesan, grated</li>
+          <li>1 small garlic clove</li>
+          <li>80 ml olive oil and a pinch of salt</li>
+        </ul>
+
+        <h3>Method</h3>
+
+        <ol>
+          <li>Blend the basil, pine nuts, garlic, Parmesan and salt, adding the olive oil slowly until it forms a rough paste.</li>
+          <li>Boil the fusilli in salted water until al dente. Save a cup of the cooking water.</li>
+          <li>Toss the drained pasta with the pesto and a splash of cooking water until every spiral is coated.</li>
+          <li>Serve at once with extra Parmesan on top.</li>
+        </ol>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="page-footer">
+
+    <p class="footer-title">GOOD FOOD. GOOD MOOD.</p>
+
+    <p>Cook it, taste it, change it.</p>
+
+    <a href="#top" class="back-to-top">BACK TO TOP ↑</a>
+
+  </footer>
+
 </body>
 </html>

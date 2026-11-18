@@ -1,51 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <title>Recipe Search</title>
     <link rel="stylesheet" href="searchstyle.css">
 </head>
-
 <body>
-    <div class="container">
 
-        <!-- navigation -->
-        <nav class="navigation">
-            <div class="menu-container">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="recipe-detail.html">Recipes</a></li>
-                    <li><a href="search.html">Search</a></li>
-                </ul>
+    <header>
+        <nav>
+            <a href="#" class="active">HOME</a>
+            <span>|</span>
+            <a href="#">RECIPES</a>
+            <span>|</span>
+            <a href="#">ABOUT</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="search-section">
+
+            <div class="search-area">
+                <h1>FULL SEARCH</h1>
+
+                <div class="search-bar">
+                    <span class="search-icon"></span>
+                    <input type="text" placeholder="Search">
+                </div>
+
+                <p class="search-note">Let's go already!</p>
             </div>
 
-            <!-- hero -->
-       
+            <div class="filter-box">
+                <h2>Search filter : category</h2>
 
-  <div class="hero-search">
- <div class="search-box">
-<span class="search-icon">
- <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none" />
-     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-      stroke-width="2" d="m15 15l6 6m-11-4a7 7 0 1 1 0-14a7 7 0 0 1 0 14" />
-</svg>
+                <div class="filter-options">
 
- </span>
-<input type="text" placeholder="Search" class="search-input">
- </div>
+                    <div class="filter-column">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Seafood</span>
+                        </label>
 
-      </div>
+                        <label>
+                            <input type="radio" name="category" checked>
+                            <span>Beef/Pork</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Chicken</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Snacks</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-column">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Pasta</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Vegetarian</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Dessert</span>
+                        </label>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-         <!-- Social media -->
+        </section>
+
+        <section class="results">
+
+            <article class="result">
+                <p class="category seafood">
+                    <span>|</span> Category: <strong>SEAFOOD</strong>
+                </p>
+
+                <h2>SEARCH RESULT ONE</h2>
+
+                <p class="description">
+                    This will be the excerpt from WordPress, and you can control several things here. Like the length of the text that is shown and multiple other things. Now i just writing stuff to fill it out, and the final three dots indicate there is more text ...
+                </p>
+            </article>
+
+            <article class="result">
+                <p class="category chicken">
+                    <span>|</span> Category: <strong>CHICKEN</strong>
+                </p>
+
+                <h2>SEARCH RESULT TWO</h2>
+
+                <p class="description">
+                    This will be the excerpt from WordPress, and you can control several things here. Like the length of the text that is shown and multiple other things. Now i just writing stuff to fill it out, and the final three dots indicate there is more text ...
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Social media -->
             <div class="footer-social">
                 <a href="#">
                     <span class="footer-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
@@ -124,6 +196,5 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
-</body>
 
 </html>
