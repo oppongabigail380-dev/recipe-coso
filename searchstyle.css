@@ -11,29 +11,45 @@ body {
     font-size: 14px;
 }
 
-header {
+.navigation {
     width: 100%;
-    padding: 10px 40px;
-}
-
-nav {
+    height: 80px;
+    background-color: #00000088;
+    padding: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
-    font-size: 10px;
+    text-transform: uppercase;
 }
 
-nav a {
-    color: #cccccc;
+.menu-container {
+    width: 1200px;
+    max-width: 100%;
+}
+
+.menu-container ul {
+    display: flex;
+}
+
+.menu-container ul li {
+    list-style: none;
+}
+
+.menu-container a {
+    color: #ededed;
     text-decoration: none;
+    font-size: 16px;
+    padding: 0 10px;
+    border-right: 1px solid #ededed;
 }
 
-nav a.active {
-    color: #d45b20;
+.menu-container li:last-child a {
+    border-right: none;
 }
 
-nav span {
-    color: #888888;
+.menu-container a:hover,
+.menu-container a.active {
+    color: #bf5b23;
 }
 
 .container {
@@ -513,289 +529,51 @@ body {
     transform: rotate(25deg);
 }
 
+/* Colors: skip this if you already define these in :root */
+:root {
+  --color-light: #ffffff;
+  --footer-ink: #ffffff;
+}
 
-/* =====================================
+/* =========================
    FOOTER
-===================================== */
+========================= */
 
-/* CHANGED */
+/* Block 1: footer wrapper + 3-column layout */
 .footer {
-    width: 100vw;
-    margin: auto calc(50% - 50vw) 0;
-
-    background-color: #cf6024;
-    color: #733c1f;
-
-    min-height: 120px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 2px 2fr;
-
-    align-items: center;
-
-    gap: 35px;
-
-    padding: 25px 7%;
-}
-
-
-/* FOOTER SOCIAL LINKS */
-
-.footer-social,
-.footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.footer a {
-    color: #733c1f;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.footer a:hover {
-    color: #ffffff;
-}
-
-
-/* FOOTER DIVIDER */
-
-.footer-divider {
-    width: 2px;
-    height: 65px;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-
-/* FOOTER INFORMATION */
-
-.footer-info {
-    text-align: right;
-    font-size: 10px;
-    line-height: 1.5;
-}
-
-.copyright {
-    margin-top: 12px;
-}
-/* =====================================
-   MOBILE PHONES
-   600px AND BELOW
-===================================== */
-
-@media (max-width: 600px) {
-
-    .page {
-        padding: 22px 15px 0;
-    }
-
-    .header {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .header h1 {
-        font-size: 22px;
-    }
-
-    .content-grid {
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-
-    .text-card,
-    .visual-panel {
-        aspect-ratio: auto;
-        min-height: 210px;
-    }
-
-    .text-card {
-        padding: 35px 28px;
-    }
-
-    .card-content {
-        max-width: 100%;
-    }
-
-    .text-card h2 {
-        font-size: 19px;
-    }
-
-    .small-title {
-        font-size: 13px;
-    }
-
-    .description {
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
-
-    .button {
-        width: 130px;
-        height: 36px;
-    }
-
-    .visual-panel {
-        min-height: 190px;
-    }
-
-    
-/* =====================================
-   FOOTER
-===================================== */
-
-/* CHANGED */
-.footer {
-    width: 100vw;
-    box-sizing: border-box;
-
-    margin: auto calc(50% - 50vw) 0;
-
-    background-color: #cf6024;
-    color: #733c1f;
-
-    min-height: 120px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 2px 2fr;
-
-    align-items: center;
-    gap: 35px;
-
-    padding: 25px 7%;
-}
-
-/* FOOTER SOCIAL LINKS */
-
-.footer-social,
-.footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.footer a {
-    color: #733c1f;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.footer a:hover {
-    color: #ffffff;
-}
-
-/* FOOTER DIVIDER */
-
-.footer-divider {
-    width: 2px;
-    height: 65px;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* FOOTER INFORMATION */
-
-.footer-info {
-    text-align: right;
-    font-size: 10px;
-    line-height: 1.5;
-}
-
-.copyright {
-    margin-top: 12px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    /* CHANGED */
-    .footer {
-        width: 100vw;
-        margin: auto calc(50% - 50vw) 0;
-        padding: 20px 7%;
-    }
-
-    .footer-container {
-        width: 88%;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-    }
-
-    .footer-right {
-        grid-column: 1 / -1;
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        padding-left: 0;
-        padding-top: 20px;
-        height: auto;
-        min-height: 80px;
-        align-items: flex-start;
-    }
-
-    .footer-links {
-        text-align: left;
-    }
-
-    .footer-eco {
-        justify-content: flex-start;
-    }
-}
-
-/* REMOVE DEFAULT BODY MARGIN */
-body {
-    margin: 0;
-}
-/* CHANGED */
-.footer {
-  width: 100vw;
-  background-color: #cf6024;
-  margin: auto calc(50% - 50vw) 0;
-  padding: 25px 7%;
+  background: #c05a22;
+  padding: 40px 5%;
 }
 
 .footer-container {
-  width: var(--width-12col);
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+  align-items: stretch; /* makes the white line as tall as the columns */
 }
 
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-social a {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: var(--background-color-dark-bg);
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.footer-icon {
-  font-size: 25px;
-  width: 30px;
-  text-align: center;
-}
-
+/* Block 2: social links + footer menu */
+.footer-social,
 .footer-menu {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
+.footer-social a,
 .footer-menu a {
-  color: var(--background-color-dark-bg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--footer-ink);
   text-decoration: none;
   font-size: 16px;
+  color: #000;
 }
 
+/* Block 3: divider + links + eco note */
 .footer-right {
   border-left: 2px solid var(--color-light);
   padding-left: 40px;
@@ -804,6 +582,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   gap: 25px;
+  color: #000;
 }
 
 .footer-links {
@@ -814,9 +593,8 @@ body {
 }
 
 .footer-links a {
-  color: var(--color-white);
+  color: black;
   font-size: 12px;
-  text-decoration: none;
   overflow-wrap: anywhere;
 }
 
@@ -828,416 +606,52 @@ body {
 }
 
 .eco-icon {
-  font-size: 22px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  color: var(--background-color-dark-bg);
+  color: var(--footer-ink);
 }
 
 .footer-eco p {
   font-size: 11px;
   line-height: 1.5;
   text-align: left;
-  color: var(--background-color-dark-bg);
+  color: var(--footer-ink);
   max-width: 180px;
+  color: #000;
 }
 
-.footer a:hover {
-  opacity: 0.7;
-}
-
-@media (width <= 768px) {
-  :root {
-    --width-12col: 100%;
-  }
-
-  .hamburger_menu {
-    display: block;
-    font-size: 24px;
-    color: var(--color-light);
-    margin-left: auto;
-  }
-
-  .menu-container {
-    display: none;
-  }
-
-  .mobile_menu {
-    display: block;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 180px;
-    height: auto;
-    background-color: var(--color-dark);
-    opacity: 0;
-    z-index: 1000;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: 0.3s ease;
-  }
-
-  .mobile_menu.open {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .mobile_menu ul {
-    padding: 0;
-  }
-
-  .mobile_menu ul li {
-    list-style: none;
-    padding: 15px;
-  }
-
-  .mobile_menu ul li a {
-    text-decoration: none;
-    color: var(--color-light);
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 12px;
-  }
-
-  .recipe-container {
-    width: calc(100% - 40px);
-  }
-
-  .recipe-overview {
-    grid-template-columns: 1fr;
-    padding-top: 130px;
-    gap: 30px;
-  }
-
-  .recipe-photo {
-    grid-row: 1;
-  }
-
-  .recipe-overview h1 {
-    font-size: 34px;
-  }
-
-  .recipe-facts {
-    flex-wrap: wrap;
-    margin: 30px 0;
-  }
-
-  .recipe-ingredient-columns {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .recipe-instructions {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-top: 70px;
-    margin-bottom: 60px;
-  }
-
-  .recipe-section-title {
-    font-size: 26px;
-    white-space: normal;
-    border-bottom: 1px solid var(--background-color-light);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-  }
-
-  .recipe-instructions-row {
-    grid-template-columns: 30px 1fr;
-    gap: 10px;
-  }
-
-  .recipe-instructions-row p {
-    font-size: 13px;
-    line-height: 1.9;
-  }
+/* SVG icons */
+.footer-icon svg,
+.eco-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  stroke: none;
+  color: #000;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
-
-/* CHANGED */
-.footer {
-    width: 100vw;
-    margin: auto calc(50% - 50vw) 0;
-    background-color: #cf6024;
-    padding: 25px 7%;
-    box-sizing: border-box;
-}
-
-.footer-container {
-    width: 92%;
-    max-width: 100%;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 2.2fr;
-    gap: 30px;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-/* FIRST COLUMN - SOCIAL MEDIA */
-
-.footer-social {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--background-color-dark-bg);
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.footer-icon {
-    font-size: 18px;
-    width: 22px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-/* SECOND COLUMN - NAVIGATION */
-
-.footer-menu {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-self: center;
-    gap: 8px;
-}
-
-.footer-menu a {
-    color: var(--background-color-dark-bg);
-    text-decoration: none;
-    font-size: 12px;
-}
-
-/* THIRD COLUMN - RIGHT SECTION */
-
-.footer-right {
-    grid-column: 3;
-
-    border-left: 2px solid var(--color-light);
-    padding-left: 35px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 15px;
-
-    width: 100%;
-    min-width: 0;
-    min-height: 50px;
-    box-sizing: border-box;
-}
-
-/* SPOTIFY LINKS */
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    text-align: right;
-    width: 100%;
-}
-
-.footer-links a {
-    color: var(--color-white);
-    font-size: 9px;
-    text-decoration: underline;
-    overflow-wrap: anywhere;
-}
-
-/* RENEWABLE ELECTRICITY */
-
-.footer-eco {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.eco-icon {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    color: var(--background-color-dark-bg);
-}
-
-.footer-eco p {
-    font-size: 9px;
-    line-height: 1.5;
-    text-align: left;
-    color: var(--background-color-dark-bg);
-    max-width: 150px;
-}
-
-/* HOVER EFFECT */
-
-.footer a:hover {
-    opacity: 0.7;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
-
+/* Footer on mobile */
 @media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-    :root {
-        --width-12col: 100%;
-    }
+  .footer-right {
+    border-left: none;
+    border-top: 2px solid var(--color-light);
+    padding-left: 0;
+    padding-top: 25px;
+    align-items: flex-start;
+  }
 
-    .hamburger_menu {
-        display: block;
-        font-size: 24px;
-        color: var(--color-light);
-        margin-left: auto;
-    }
+  .footer-links {
+    text-align: left;
+  }
 
-    .menu-container {
-        display: none;
-    }
-
-    .mobile_menu {
-        display: block;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 180px;
-        height: auto;
-        background-color: var(--color-dark);
-        opacity: 0;
-        z-index: 1000;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: 0.3s ease;
-    }
-
-    .mobile_menu.open {
-        transform: translateY(0);
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .mobile_menu ul {
-        padding: 0;
-    }
-
-    .mobile_menu ul li {
-        list-style: none;
-        padding: 15px;
-    }
-
-    .mobile_menu ul li a {
-        text-decoration: none;
-        color: var(--color-light);
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 12px;
-    }
-
-    /* RECIPE MOBILE */
-
-    .recipe-container {
-        width: calc(100% - 40px);
-    }
-
-    .recipe-overview {
-        grid-template-columns: 1fr;
-        padding-top: 130px;
-        gap: 30px;
-    }
-
-    .recipe-photo {
-        grid-row: 1;
-    }
-
-    .recipe-overview h1 {
-        font-size: 34px;
-    }
-
-    .recipe-facts {
-        flex-wrap: wrap;
-        margin: 30px 0;
-    }
-
-    .recipe-ingredient-columns {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .recipe-instructions {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-top: 70px;
-        margin-bottom: 60px;
-    }
-
-    .recipe-section-title {
-        font-size: 26px;
-        white-space: normal;
-        border-bottom: 1px solid var(--background-color-light);
-        padding-bottom: 15px;
-        margin-bottom: 30px;
-    }
-
-    .recipe-instructions-row {
-        grid-template-columns: 30px 1fr;
-        gap: 10px;
-    }
-
-    .recipe-instructions-row p {
-        font-size: 13px;
-        line-height: 1.9;
-    }
-
-    /* FOOTER MOBILE */
-
-    /* CHANGED */
-    .footer {
-        width: 100vw;
-        margin: auto calc(50% - 50vw) 0;
-    }
-
-
-    .footer-social {
-        grid-column: 1;
-    }
-
-    .footer-menu {
-        grid-column: 2;
-        justify-self: center;
-    }
-
-    .footer-right {
-        grid-column: 1 / -1;
-        border-left: none;
-        border-top: 1px solid var(--color-light);
-        padding: 20px 0 0;
-        align-items: flex-start;
-    }
-
-    .footer-links {
-        text-align: left;
-    }
-
-    .footer-eco {
-        justify-content: flex-start;
-    }
-}
+  .footer-eco {
+    justify-content: flex-start;
+  }
 }

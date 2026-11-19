@@ -10,6 +10,11 @@
   --tomato: #d8432a;
   --grey: #aaaaaa;
 
+  /* added for the footer */
+  --primary-colour: #bf5b23;
+  --color-light: #ededed;
+  --footer-ink: #111111;
+
   --font-display: "Bricolage Grotesque", sans-serif;
   --font-body: "Newsreader", Georgia, serif;
 }
@@ -32,42 +37,46 @@ body {
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
-
-.recipe-header {
-  background-color: #000000;
+.navigation {
   width: 100%;
-  padding: 30px 7%;
-}
-
-.recipe-nav {
+  height: 80px;
+  background-color: #00000088;
+  padding: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  text-transform: uppercase;
   font-family: Arial, sans-serif;
 }
 
-.recipe-nav a {
-  color: #cccccc;
+.menu-container {
+  width: 1200px;
+  max-width: 100%;
+}
+
+.menu-container ul {
+  display: flex;
+}
+
+.menu-container ul li {
+  list-style: none;
+}
+
+.menu-container a {
+  color: #ededed;
   text-decoration: none;
-  font-size: 9px;
-  font-weight: 400;
-  transition: color 0.3s ease;
+  font-size: 16px;
+  padding: 0 10px;
+  border-right: 1px solid #ededed;
 }
 
-.recipe-nav span {
-  color: #777777;
-  font-size: 9px;
+.menu-container li:last-child a {
+  border-right: none;
 }
 
-.recipe-nav a.active {
-  color: #e87532;
-}
-
-.recipe-nav a:hover {
-  color: var(--semolina);
+.menu-container a:hover,
+.menu-container a.active {
+  color: #bf5b23;
 }
 
 
@@ -236,41 +245,131 @@ body {
 
 /* =========================
    FOOTER
+   (replaces the old .page-footer rules)
 ========================= */
 
-.page-footer {
-  background-color: #000000;
-  border-top: 1px solid #333333;
-  padding: 55px 7%;
-  text-align: center;
+.footer {
+  width: 100%;
+  background-color: var(--primary-colour);
+  padding: 45px 20px;
+  font-family: "Roboto", Arial, sans-serif;
+  text-align: left;
 }
 
-.footer-title {
-  color: var(--semolina);
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 10px;
+.footer-container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 40px;
 }
 
-.page-footer p:not(.footer-title) {
-  color: #cccccc;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.back-to-top {
-  display: inline-block;
-  color: var(--tomato);
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
+.footer a {
+  color: #111111;
   text-decoration: none;
-  margin-top: 10px;
 }
 
-.back-to-top:hover {
-  color: var(--semolina);
+.footer .footer-links a {
+  color: #ffffff;
+}
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+/* Block 1: social */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--footer-ink);
+  font-size: 16px;
+}
+
+.footer-icon {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Block 2: menu */
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: black
+}
+
+.footer-menu a {
+  color: var(--footer-ink);
+  font-size: 16px;
+}
+
+/* Block 3: divider + links + eco note */
+.footer-right {
+  border-left: 2px solid var(--color-light);
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.footer-eco {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.eco-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--footer-ink);
+}
+
+.footer-eco p {
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--footer-ink);
+  max-width: 180px;
+}
+
+/* SVG icons */
+.footer-icon svg,
+.eco-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--footer-ink);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
@@ -321,16 +420,26 @@ body {
     height: 300px;
   }
 
-  .recipe-body {
-    width: 100%;
+  /* footer on mobile */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .recipe-body h2 {
-    font-size: 35px;
+  .footer-right {
+    border-left: none;
+    border-top: 2px solid var(--color-light);
+    padding-left: 0;
+    padding-top: 25px;
+    align-items: flex-start;
   }
 
-  .page-footer {
-    padding: 40px 5%;
+  .footer-links {
+    text-align: left;
+  }
+
+  .footer-eco {
+    justify-content: flex-start;
   }
 
 }
